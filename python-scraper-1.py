@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 with open('index.html', 'r') as f:
     doc = BeautifulSoup(f, "html.parser")
 
-tags = doc.find_all('p')
+tags = doc.find_all(class_="dot")
 #doc.title
 #doc.find()
 #find_all('p')[0] get the first element
