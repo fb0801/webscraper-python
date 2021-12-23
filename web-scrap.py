@@ -24,9 +24,10 @@ for page in range(1, pages + 1):
 
     for item in items:
         parent = items.parent
-        if parent.name =="a":
-            link = parent['href']
-            
+        if parent.name !="a":
+            continue
+
+        link = parent['href']
         print(item)
 
 #print(pages, "pages found")
