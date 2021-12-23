@@ -18,6 +18,11 @@ for page in range(1, pages + 1):
     url=f"https://www.newegg.com/global/uk-en/p/pl?d={search_term}&N=4131&page={page}" #feeding the input to the url to find the result
     page = requests.get(url).text
     doc= BeautifulSoup(page, 'html.parser')
+    
+    div = doc.find(class_="item-cells-wrap border-cells items-grid-view four-cells expulsion-one-cell")
     items = doc.find_all(text=re.compile(search_term))
 
-print(pages, "pages found")
+    for item in items:
+        print(item)
+
+#print(pages, "pages found")
