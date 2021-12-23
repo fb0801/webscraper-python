@@ -10,4 +10,9 @@ doc = BeautifulSoup(result, "html.parser")
 
 tbody = doc.tbody
 trs = tbody.contents
-print(trs[0].contents)
+prices = {}
+
+for tr in trs:
+    for td in tr.contents:
+        print (td)
+        print()
