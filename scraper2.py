@@ -13,6 +13,6 @@ trs = tbody.contents
 prices = {}
 
 for tr in trs:
-    for td in tr.contents:
-        print (td)
-        print()
+    name, price = tr.contents[2:4]
+    print (name)
+    print()
