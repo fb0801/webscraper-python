@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en"><!--declare the language of the page-->
+<head>
+<title>Anime Addict</title><!--Display as site tab title-->
+<link href="images/anime_logo.ico" rel="shortcut icon" type="image/x-icon"/> <!--adds a image to the title to display in the tab-->
+<link href="css/anime_style.css" rel="stylesheet" type="text/css"/>
+<!-- link css and html-->
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!--make the webpage fit the screen-->
+</head>
+<div class="dif">
+<body>
+<a href="index.html"><img alt="Logo" class="logo" src="images/logo.jpg" title="return to mainpage"/></a>
+<h1 id="no_head">Anime Addict</h1>
+<br/><br/><br/><br/></body></div>
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="why_anime.html">Why you should watch anime?</a>
+<a href="anime.html">Anime</a>
+<div class="dropdown">
+<button class="dropbtn">Books 
+    </button>
+<div class="dropdown-content">
+<a href="books.html">Books</a>
+<a href="manga.html">Manga</a>
+<a href="light_novel.html">Light novel</a>
+<a href="webtoons.html">Webtoons</a>
+</div>
+</div>
+<a href="service.html">Anime services</a>
+<a href="feedback.html">Feedback</a>
+<img alt="change theme" id="theme" onclick="changeBGC('#000000')" ondblclick="changeBGC('#ffffff')" src="images/moonedit.jpg" title="change theme"/>
+<img alt="change font" class="theme_2" onclick="changesize()" ondblclick="changeback()" src="images/website_font.jpg" title="change font"/>
+</div>
+<h1 id="anime_head">Anime Addict</h1>
+<div class="home"><img alt="Logo" class="home_img" src="images/logo.jpg" title="Anime Addict logo"/></div>
+<div class="home_2"><p id="ch1">Welcome to <b>Anime Addict</b> the website for anything anime or managa related from Japan, America or China.</p>
+<p id="ch2">Anime Addict was started in 2019 and is a non profit organisation.</p></div>
+<div class="home_slide">
+<center>
+<div class="slide-container">
+<div class="myslides">
+<div class="numbertext">1/8</div>
+<img class="slide" src="images/shield_hero.png"/>
+</div>
+<div class="myslides">
+<div class="numbertext">2/8</div>
+<img class="slide" src="images/hxhcover.jpg"/>
+</div>
+<div class="myslides">
+<div class="numbertext">3/8</div>
+<img class="slide" src="images/solo_lvl.jpg"/>
+</div>
+<div class="myslides">
+<div class="numbertext">4/8</div>
+<img class="slide_2" src="images/gintoki.gif"/>
+</div>
+<div class="myslides">
+<div class="numbertext">5/8</div>
+<img class="slide" src="images/gintama_anime.jpg"/>
+</div>
+<div class="myslides">
+<div class="numbertext">6/8</div>
+<img class="slide" src="images/download.jpg"/>
+</div>
+<div class="myslides">
+<div class="numbertext">7/8</div>
+<img class="slide" src="images/nogamenolife.jpg"/>
+</div>
+<div class="myslides">
+<div class="numbertext">8/8</div>
+<img class="slide" src="images/Aot_2.jpg"/>
+</div>
+</div>
+<br/>
+<div style="text-align:center">
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+</center>
+</div>
+<div class="bottom_sec">
+<p>© This is a demonstration website for LSBU (London Southbank University) all images and text is from, wikipedia, myanimelist, Crunchyroll, tenor, mangarock</p>
+</div>
+<script>
+function changeBGC(color){
+/*var pic=document.getElementById('theme');
+	if(pic.src.match('sunedit.jpg')){
+	pic.src="moonedit.jpg";
+	} else {
+	pic.src="sunedit.jpg";
+	https://stackoverflow.com/questions/14867544/how-to-change-text-color-using-javascript-for-loop
+	*/
+	if (color=='#000000'){
+		document.body.style.backgroundColor = color;
+		document.getElementById('theme').src='images/sunedit.jpg';
+		document.getElementById('anime_head').style.color='white';
+		document.getElementById('ch1').style.color='white';
+		document.getElementById('ch2').style.color='white';
+		
+	}else{
+		document.body.style.backgroundColor = color;
+		document.getElementById('theme').src='images/moonedit.jpg';
+		document.getElementById('anime_head').style.color='black';
+		document.getElementById('ch1').style.color='black';
+		document.getElementById('ch2').style.color='black';
+
+  //document.getElementById("theme").style.display= "block";}
+  }}
+function changesize(){
+// loop through the document to find all p and change the size
+var i,text= document.querySelectorAll('p');
+for (i=0; i< text.length; i++){ 
+ text[i].style.fontSize='20px';
+		
+}}
+function changeback(){
+// loop through the document to find all <p> and change the size back
+var i,text= document.querySelectorAll('p');
+for (i=0; i< text.length; i++){ 
+ text[i].style.fontSize='16px';
+		
+}}
+</script>
+<script>
+var slideIndex = 0;
+showslide();
+function showslide() {
+var i;
+var slides=document.getElementsByClassName("myslides");
+var dots=document.getElementsByClassName("dot");
+for (i=0;i< slides.length;i++){
+slides[i].style.display="none";
+}
+slideIndex++;
+if (slideIndex >slides.length) (slideIndex = 1)
+for(i=0;i<dots.length;i++){
+dots[i].className=dots[i].className.replace(" act", "");
+}
+slides[slideIndex-1].style.display="block";
+dots[slideIndex-1].className += " act";
+setTimeout(showslide,10000);//change image every 15 sec 10
+}
+</script>
+
+</html>
