@@ -10,4 +10,4 @@ doc = BeautifulSoup(result, "html.parser")
 
 tbody = doc.tbody
 trs = tbody.contents
-print(trs[1].previous_sibling)
+print(trs[0].contents)
