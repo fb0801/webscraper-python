@@ -13,3 +13,5 @@ doc= BeautifulSoup(page, 'html.parser')
 
 page_text = doc.find(class_="list-tool-pagination-text").strong
 pages = str(page_text).split("/")[-2]
+
+print(pages)
