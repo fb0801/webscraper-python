@@ -20,9 +20,13 @@ for page in range(1, pages + 1):
     doc= BeautifulSoup(page, 'html.parser')
     
     div = doc.find(class_="item-cells-wrap border-cells items-grid-view four-cells expulsion-one-cell")
-    items = doc.find_all(text=re.compile(search_term))
+    items = div.find_all(text=re.compile(search_term))
 
     for item in items:
+        parent = items.parent
+        if parent.name =="a":
+            link = parent['href']
+            
         print(item)
 
 #print(pages, "pages found")
