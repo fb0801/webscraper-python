@@ -14,6 +14,8 @@ doc= BeautifulSoup(page, 'html.parser')
 page_text = doc.find(class_="list-tool-pagination-text").strong
 pages = int(str(page_text).split("/")[-2].split(">")[-1][:1])
 
+items
+
 for page in range(1, pages + 1):
     url=f"https://www.newegg.com/global/uk-en/p/pl?d={search_term}&N=4131&page={page}" #feeding the input to the url to find the result
     page = requests.get(url).text
@@ -29,8 +31,8 @@ for page in range(1, pages + 1):
 
         link = parent['href']
         next_parent = item.find_parent(class_= "item-container")
-        price = next_parent.find(class_='price-current')
+        price = next_parent.find(class_='price-current').strong.string
 
-        print(item)
+        print(price)
 
 #print(pages, "pages found")
