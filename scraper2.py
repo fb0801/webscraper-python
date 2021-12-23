@@ -12,7 +12,7 @@ tbody = doc.tbody
 trs = tbody.contents
 prices = {}
 
-for tr in trs:
+for tr in trs[10]:
     name, price = tr.contents[2:4]
-    print (name.p.string)
-    print()
+    fixed_name = name.p.string
+    print(price)
