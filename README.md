@@ -27,4 +27,5 @@ Beautifulsoup webscraper with python built using TechWithTim <a href="https://ww
   <li>https://www.newegg.ca/gigabyte-geforce-rtx-3080-ti-gv-n308tgaming-oc-12gd/p/N82E16814932436?Description=3080&cm_re=3080-_-14-932-436-_-Product</li>
   <li>https://www.educative.io/edpresso/how-to-run-a-python-script-in-linux</li>
   <li>https://coinmarketcap.com/ </li>
+  <li>https://www.newegg.com/global/uk-en?source=region</li>
 </ul>
