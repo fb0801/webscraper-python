@@ -28,6 +28,9 @@ for page in range(1, pages + 1):
             continue
 
         link = parent['href']
+        next_parent = parent.parent
+        price = next_parent.find(class_='price-current')
+
         print(item)
 
 #print(pages, "pages found")
