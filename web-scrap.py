@@ -36,5 +36,11 @@ for page in range(1, pages + 1):
         items_found[item] = {"price": int(price.replace(",", "")), "link": link}
 #print(items_found)
 
+sorted_items = sorted(items_found.items(), lambda x:[1]['price'])
+for item in sorted_items:
+    print(item[0])
+    print(f"${item[1]['price']}")
+    
+
 
 #print(pages, "pages found")
