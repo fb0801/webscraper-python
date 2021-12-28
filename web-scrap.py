@@ -31,16 +31,19 @@ for page in range(1, pages + 1):
 
         link = parent['href']
         next_parent = item.find_parent(class_= "item-container")
-        price = next_parent.find(class_='price-current').strong.string
+        try:
+            price = next_parent.find(class_='price-current').find('strong').string
+            items_found[item] = {"price": int(price.replace(",", "")), "link": link}
+        except:
+            pass
 
-        items_found[item] = {"price": int(price.replace(",", "")), "link": link}
-#print(items_found)
 
 sorted_items = sorted(items_found.items(), lambda x:[1]['price'])
 for item in sorted_items:
     print(item[0])
     print(f"${item[1]['price']}")
-    
+    print(item[1]['link'])
+    print('--------------------------------')    
 
 
 #print(pages, "pages found")
