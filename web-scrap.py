@@ -33,7 +33,8 @@ for page in range(1, pages + 1):
         next_parent = item.find_parent(class_= "item-container")
         price = next_parent.find(class_='price-current').strong.string
 
-        items_found[item] = {"price": price, "link":link}
-print(items_found)
+        items_found[item] = {"price": int(price.replace(",", "")), "link": link}
+#print(items_found)
+
 
 #print(pages, "pages found")
