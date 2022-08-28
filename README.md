@@ -1,6 +1,6 @@
 # webscraper-python
 <h4>Description:</h4>
-Beautifulsoup webscraper with python built using TechWithTim <a href="https://www.youtube.com/watch?v=gRLHr664tXA">video</a>
+Beautifulsoup webscraper with python built using TechWithTim <a href="https://www.youtube.com/watch?v=gRLHr664tXA">video</a> and others
 
 <h4>Changes made: </h4>
 <ul>
