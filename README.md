@@ -32,4 +32,5 @@ Beautifulsoup webscraper with python built using TechWithTim <a href="https://ww
   <li>https://www.educative.io/edpresso/how-to-run-a-python-script-in-linux</li>
   <li>https://coinmarketcap.com/ </li>
   <li>https://www.newegg.com/global/uk-en?source=region</li>
+  <li>https://www.youtube.com/watch?v=Bg9r_yLk7VY</li>
 </ul>
